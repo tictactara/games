@@ -1,0 +1,140 @@
+html, body, figure, figcaption, ul, li, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+  animation: flip-scale-down-diag-2 0.5s linear both;
+  color: yellow;
+  
+}
+
+@keyframes flip-scale-down-diag-2 {
+  0% {
+    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+  50% {
+    transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+  }
+  100% {
+    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+}
+
+
+ul {
+  list-style: none;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+  background-image: url(https://i.imgur.com/jM62L73.jpg);
+}
+
+h1 {
+  font-size: 60px;
+  margin: 30px;
+}
+
+ul {
+  margin: 30px auto;
+  width: 300px;
+  border: 5px solid yellow;
+}
+
+li {
+  float: left;
+  width: 90px;
+  height: 90px;
+  border: 5px solid orangered;
+  background: turquoise;
+  cursor: pointer;
+}
+
+li:hover {
+  background: blueviolet;
+}
+
+.x,
+.o {
+  background: white;
+  cursor: default;
+}
+
+.x:hover,
+.o:hover {
+  background: white;
+}
+
+.x:after,
+.o:after {
+  display: block;
+  width: 100%;
+  font-size: 60px;
+  line-height: 80px;
+}
+
+.x:after {
+  content: url(https://i.imgur.com/KL4C6oM.png);
+  /* transform: scale(.5); */
+  /* transform: scale(.4); */
+  top: -20px;
+  /* max-width: 50px;
+  max-height: 50px; */
+  /* display: flex;
+  align-items: center; */
+  
+}
+
+.o:after {
+  /* content: "o"; */
+  content: url(https://i.imgur.com/ZD163SB.png);
+  /* transform: scale(.4); */
+  top: -20px;
+  content.height: 90px;
+  content.width: 90px;
+  margin: 0;
+  padding: 0;
+}
+
+.game-over li {
+  color: red;
+  cursor: default;
+  background: pink;
+}
+
+.winner-x .x,
+.winner-o .o {
+  background: green;
+  color: brown;
+  
+}
+
+.winner-x {
+  z-index: 100;
+  color: pink;
+  height: 1200px;
+  width: 1300px;
+  background-image: url(https://i.imgur.com/C5g5nvQ.jpg);
+}
+
+.winner-o {
+    z-index: 100;
+  color: pink;
+  height: 1200px;
+  width: 1300px;
+  background-image: url(https://i.imgur.com/cmdJhRh.jpg);
+}
+
+
+figcaption {
+  font-size: 30px;
+}
